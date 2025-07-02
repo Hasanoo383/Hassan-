@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student Dashboard</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f5f8fa;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #ffffff;
+      padding: 15px 30px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .profile-area {
+      display: flex;
+      align-items: center;
+    }
+
+    .profile-pic {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-right: 15px;
+      border: 2px solid #007bff;
+    }
+
+    .profile-name {
+      font-weight: 600;
+      color: #003366;
+      font-size: 18px;
+    }
+
+    .welcome-box {
+      background: #e9eef2;
+      padding: 30px;
+      margin: 20px;
+      border-radius: 10px;
+    }
+
+    .welcome-box h2 {
+      margin-bottom: 10px;
+      color: #1a1a1a;
+    }
+
+    .welcome-box p {
+      font-size: 16px;
+      color: #444;
+    }
+
+    .dashboard-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 10px;
+      padding: 25px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .card.orange {
+      background-color: #fbb034;
+      color: #000;
+    }
+
+    .card.teal {
+      background-color: #009688;
+      color: white;
+    }
+
+    .card.gray {
+      background-color: #4e545c;
+      color: white;
+    }
+
+    .card-content h1 {
+      font-size: 32px;
+      margin: 0;
+    }
+
+    .card-content h4 {
+      font-size: 16px;
+      margin: 8px 0 5px;
+      font-weight: normal;
+    }
+
+    .card-content span {
+      font-size: 24px;
+      font-weight: bold;
+      display: block;
+      margin-top: 10px;
+    }
+
+    @media (max-width: 600px) {
+      .dashboard-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="profile-area">
+    <img src="profile.jpg" alt="Profile Picture" class="profile-pic" />
+    <div class="profile-name">Hassan Ally</div>
+  </div>
+</header>
+
+<div class="welcome-box">
+  <h2>Welcome Hassan Ally,</h2>
+  <p>Get ready to start your field journey. Submit your request, track progress, and stay updated on opportunities and activities.</p>
+</div>
+
+<div class="dashboard-grid">
+
+  <div class="card orange" onclick="location.href='12345.html'">
+    <div class="card-content">
+      <h1>✔</h1>
+      <h4>VIEW MY STATUS</h4>
+      <p style="font-size:14px;">Check request progress</p>
+    </div>
+  </div>
+
+  <div class="card teal" onclick="location.href='company.html'">
+    <div class="card-content">
+      <h1>25+</h1>
+      <h4>COMPANIES</h4>
+      <p style="font-size:14px;">Available for Field Requests</p>
+    </div>
+  </div>
+
+  <div class="card gray" onclick="location.href='positions.html'">
+    <div class="card-content">
+      <h4>OPEN POSITIONS</h4>
+      <span>000</span>
+    </div>
+  </div>
+
+  <div class="card orange" onclick="location.href='upload_cv.html'">
+    <div class="card-content">
+      <h4>UPLOAD CV</h4>
+      <span>Click to Upload</span>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
